@@ -12,7 +12,8 @@ public class BaiduByName {
 			InetAddress address = InetAddress.getByName("www.baidu.com");
 			InetAddress address1 = InetAddress.getByName("163.177.151.110");
 			System.out.println(address);
-			System.out.println(address1);
+			System.out.println(address1.getHostName());
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
