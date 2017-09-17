@@ -36,6 +36,12 @@ public class ClassModifier {
 		return ByteUtils.bytes2Int(classByte, CONSTANT_POOL_COUNT_INDEX, u2);
 	}
 
+	/**
+	 * 仅仅是替换class文件中常量池的信息。
+	 * @param oldStr
+	 * @param newStr
+	 * @return
+	 */
 	public byte[] modifyUTF8Constant(String oldStr, String newStr) {
 		int cpc = getConstantPoolCount();
 		int offset = CONSTANT_POOL_COUNT_INDEX + u2;
